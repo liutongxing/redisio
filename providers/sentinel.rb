@@ -114,6 +114,8 @@ def configure
           }]
       else
         masters = [current['masters']].flatten
+        Chef::Log.warn('davis: masters')
+        Chef::Log.warn('davis: masters length' + masters.length)
       end
 
       # merge in default values to each sentinel hash
